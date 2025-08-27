@@ -1,9 +1,13 @@
+/// # Example
+/// ```rs
+/// #![cfg_attr(not(feature = "std"), no_std)]
+/// #![cfg_attr(not(feature = "std"), no_main)]
+/// 
+/// ::ink_macro::prelude!();
+/// ```
 #[macro_export]
 macro_rules! prelude {
     () => {
-        #![cfg_attr(not(feature = "std"), no_std)]
-        #![cfg_attr(not(feature = "std"), no_main)]
-
         mod ink {
             pub use ::ink::prelude::vec::Drain as VecDrain;
             pub use ::ink::prelude::vec::ExtractIf as VecExtractIf;
@@ -31,6 +35,6 @@ macro_rules! prelude {
             pub use ::ink::scale::Encode;
             pub use ::ink::scale::Decode;
             pub use ::ink::scale_info::TypeInfo;
-        }       
+        }
     };
 }
