@@ -8,7 +8,7 @@
 #[macro_export]
 macro_rules! prelude {
     () => {
-        mod ink {
+        mod inkx {
             pub use ::ink::prelude::vec::Drain as VecDrain;
             pub use ::ink::prelude::vec::ExtractIf as VecExtractIf;
             pub use ::ink::prelude::vec::IntoIter as VecIntoIter;
